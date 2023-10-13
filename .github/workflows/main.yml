@@ -1,0 +1,17 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  Testing:
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@v3
+
+  - name: Test workflow
+    uses: snakemake/snakemake-github-action@v1.25.1
+    with:
+      directory: /.
+      snakefile: Snakefile
+      args: "--use-conda --show-failed-logs --cores 3"
