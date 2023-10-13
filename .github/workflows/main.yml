@@ -14,5 +14,5 @@ jobs:
       uses: snakemake/snakemake-github-action@v1.25.1
       with:
         directory: .
-        snakefile: SnakefileMin
+        snakefile: Snakefile
         args: "--use-conda --show-failed-logs --cores 3"
