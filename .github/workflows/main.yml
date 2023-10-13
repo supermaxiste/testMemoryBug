@@ -13,6 +13,6 @@ jobs:
     - name: Test workflow
       uses: snakemake/snakemake-github-action@v1.25.1
       with:
-        directory: /.
-        snakefile: Snakefile
+        directory: .
+        snakefile: SnakefileMin
         args: "--use-conda --show-failed-logs --cores 3"
